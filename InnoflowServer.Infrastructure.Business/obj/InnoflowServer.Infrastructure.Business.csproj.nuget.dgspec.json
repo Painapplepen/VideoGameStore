@@ -1,0 +1,355 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\InnoflowServer.Infrastructure.Business.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\InnoflowServer.Infrastructure.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\InnoflowServer.Infrastructure.Business.csproj",
+        "projectName": "InnoflowServer.Infrastructure.Business",
+        "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\InnoflowServer.Infrastructure.Business.csproj",
+        "packagesPath": "C:\\Users\\sanin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\sanin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj": {
+                "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj"
+              },
+              "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Interface\\VideoGameStore.Domain.Interface.csproj": {
+                "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Interface\\VideoGameStore.Domain.Interface.csproj"
+              },
+              "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Infrastructure.Data\\VideoGameStore.Infrastructure.Data.csproj": {
+                "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Infrastructure.Data\\VideoGameStore.Infrastructure.Data.csproj"
+              },
+              "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Services.Interfaces\\VideoGameStore.Services.Interfaces.csproj": {
+                "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Services.Interfaces\\VideoGameStore.Services.Interfaces.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj",
+        "projectName": "VideoGameStore.Domain.Core",
+        "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj",
+        "packagesPath": "C:\\Users\\sanin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\sanin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Interface\\VideoGameStore.Domain.Interface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Interface\\VideoGameStore.Domain.Interface.csproj",
+        "projectName": "VideoGameStore.Domain.Interface",
+        "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Interface\\VideoGameStore.Domain.Interface.csproj",
+        "packagesPath": "C:\\Users\\sanin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Interface\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\sanin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj": {
+                "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Infrastructure.Data\\VideoGameStore.Infrastructure.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Infrastructure.Data\\VideoGameStore.Infrastructure.Data.csproj",
+        "projectName": "VideoGameStore.Infrastructure.Data",
+        "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Infrastructure.Data\\VideoGameStore.Infrastructure.Data.csproj",
+        "packagesPath": "C:\\Users\\sanin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Infrastructure.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\sanin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj": {
+                "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj"
+              },
+              "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Interface\\VideoGameStore.Domain.Interface.csproj": {
+                "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Interface\\VideoGameStore.Domain.Interface.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Services.Interfaces\\VideoGameStore.Services.Interfaces.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Services.Interfaces\\VideoGameStore.Services.Interfaces.csproj",
+        "projectName": "VideoGameStore.Services.Interfaces",
+        "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Services.Interfaces\\VideoGameStore.Services.Interfaces.csproj",
+        "packagesPath": "C:\\Users\\sanin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Services.Interfaces\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\sanin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj": {
+                "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

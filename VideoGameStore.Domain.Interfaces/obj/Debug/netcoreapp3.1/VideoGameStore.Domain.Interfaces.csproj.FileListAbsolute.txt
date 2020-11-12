@@ -1,0 +1,9 @@
+C:\Users\sanin\source\repos\VideoGameStore\VideoGameStore.Domain.Interfaces\bin\Debug\netcoreapp3.1\VideoGameStore.Domain.Interfaces.deps.json
+C:\Users\sanin\source\repos\VideoGameStore\VideoGameStore.Domain.Interfaces\bin\Debug\netcoreapp3.1\VideoGameStore.Domain.Interfaces.dll
+C:\Users\sanin\source\repos\VideoGameStore\VideoGameStore.Domain.Interfaces\bin\Debug\netcoreapp3.1\VideoGameStore.Domain.Interfaces.pdb
+C:\Users\sanin\source\repos\VideoGameStore\VideoGameStore.Domain.Interfaces\obj\Debug\netcoreapp3.1\VideoGameStore.Domain.Interfaces.csprojAssemblyReference.cache
+C:\Users\sanin\source\repos\VideoGameStore\VideoGameStore.Domain.Interfaces\obj\Debug\netcoreapp3.1\VideoGameStore.Domain.Interfaces.AssemblyInfoInputs.cache
+C:\Users\sanin\source\repos\VideoGameStore\VideoGameStore.Domain.Interfaces\obj\Debug\netcoreapp3.1\VideoGameStore.Domain.Interfaces.AssemblyInfo.cs
+C:\Users\sanin\source\repos\VideoGameStore\VideoGameStore.Domain.Interfaces\obj\Debug\netcoreapp3.1\VideoGameStore.Domain.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\sanin\source\repos\VideoGameStore\VideoGameStore.Domain.Interfaces\obj\Debug\netcoreapp3.1\VideoGameStore.Domain.Interfaces.dll
+C:\Users\sanin\source\repos\VideoGameStore\VideoGameStore.Domain.Interfaces\obj\Debug\netcoreapp3.1\VideoGameStore.Domain.Interfaces.pdb

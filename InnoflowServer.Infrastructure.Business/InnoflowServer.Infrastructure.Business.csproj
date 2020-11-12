@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VideoGameStore.Domain.Core\VideoGameStore.Domain.Core.csproj" />
+    <ProjectReference Include="..\VideoGameStore.Domain.Interface\VideoGameStore.Domain.Interface.csproj" />
+    <ProjectReference Include="..\VideoGameStore.Infrastructure.Data\VideoGameStore.Infrastructure.Data.csproj" />
+    <ProjectReference Include="..\VideoGameStore.Services.Interfaces\VideoGameStore.Services.Interfaces.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,14 @@
+C:\Users\sanin\source\repos\VideoGameStore\VideoGameStore.Infrastructure.Data\bin\Debug\netcoreapp3.1\VideoGameStore.Infrastructure.Data.deps.json
+C:\Users\sanin\source\repos\VideoGameStore\VideoGameStore.Infrastructure.Data\bin\Debug\netcoreapp3.1\VideoGameStore.Infrastructure.Data.dll
+C:\Users\sanin\source\repos\VideoGameStore\VideoGameStore.Infrastructure.Data\obj\Debug\netcoreapp3.1\VideoGameStore.Infrastructure.Data.csprojAssemblyReference.cache
+C:\Users\sanin\source\repos\VideoGameStore\VideoGameStore.Infrastructure.Data\obj\Debug\netcoreapp3.1\VideoGameStore.Infrastructure.Data.AssemblyInfoInputs.cache
+C:\Users\sanin\source\repos\VideoGameStore\VideoGameStore.Infrastructure.Data\obj\Debug\netcoreapp3.1\VideoGameStore.Infrastructure.Data.AssemblyInfo.cs
+C:\Users\sanin\source\repos\VideoGameStore\VideoGameStore.Infrastructure.Data\bin\Debug\netcoreapp3.1\VideoGameStore.Infrastructure.Data.pdb
+C:\Users\sanin\source\repos\VideoGameStore\VideoGameStore.Infrastructure.Data\bin\Debug\netcoreapp3.1\VideoGameStore.Domain.Core.dll
+C:\Users\sanin\source\repos\VideoGameStore\VideoGameStore.Infrastructure.Data\bin\Debug\netcoreapp3.1\VideoGameStore.Domain.Core.pdb
+C:\Users\sanin\source\repos\VideoGameStore\VideoGameStore.Infrastructure.Data\obj\Debug\netcoreapp3.1\VideoGameStore.Infrastructure.Data.csproj.CoreCompileInputs.cache
+C:\Users\sanin\source\repos\VideoGameStore\VideoGameStore.Infrastructure.Data\obj\Debug\netcoreapp3.1\VideoGameStore.Infrastructure.Data.csproj.CopyComplete
+C:\Users\sanin\source\repos\VideoGameStore\VideoGameStore.Infrastructure.Data\obj\Debug\netcoreapp3.1\VideoGameStore.Infrastructure.Data.dll
+C:\Users\sanin\source\repos\VideoGameStore\VideoGameStore.Infrastructure.Data\obj\Debug\netcoreapp3.1\VideoGameStore.Infrastructure.Data.pdb
+C:\Users\sanin\source\repos\VideoGameStore\VideoGameStore.Infrastructure.Data\bin\Debug\netcoreapp3.1\VideoGameStore.Domain.Interface.dll
+C:\Users\sanin\source\repos\VideoGameStore\VideoGameStore.Infrastructure.Data\bin\Debug\netcoreapp3.1\VideoGameStore.Domain.Interface.pdb
