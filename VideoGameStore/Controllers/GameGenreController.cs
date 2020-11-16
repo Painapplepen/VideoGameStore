@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using VideoGameStore.Domain.Core.DTO;
@@ -10,6 +11,7 @@ namespace VideoGameStore.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "admin")]
     public class GameGenreController : ControllerBase
     {
         private readonly IService<GameGenreDTO> _service;

@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using System.Threading.Tasks;
 using VideoGameStore.Domain.Core.DTO;
 using VideoGameStore.Domain.Core.Entities;
 using VideoGameStore.Domain.Core.Models;
@@ -60,6 +61,15 @@ namespace VideoGameStore
             services.AddTransient<IUserService, UserService>();
             services.AddControllers();
 
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.Events.OnRedirectToLogin = context =>
+                {
+                    context.Response.StatusCode = 401;
+                    return Task.CompletedTask;
+                };
+            });
+
             services.AddSwaggerGen(s =>
             {
                 s.SwaggerDoc("v1", new OpenApiInfo { Title = "Video game store", Version = "v1" });
@@ -80,12 +90,7 @@ namespace VideoGameStore
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseSwagger();
-            app.UseSwaggerUI(s =>
-            {
-                s.SwaggerEndpoint("/swagger/v1/swagger.json", "Video game store V1");
-            });
-
+            
             app.UseHttpsRedirection();
 
             app.UseRouting();
@@ -97,6 +102,13 @@ namespace VideoGameStore
             {
                 endpoints.MapControllers();
             });
+
+            app.UseSwagger();
+            app.UseSwaggerUI(s =>
+            {
+                s.SwaggerEndpoint("/swagger/v1/swagger.json", "Video game store V1");
+            });
+
         }
     }
 }
