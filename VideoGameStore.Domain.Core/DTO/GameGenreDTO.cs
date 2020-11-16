@@ -8,6 +8,7 @@ namespace VideoGameStore.Domain.Core.DTO
 {
     public class GameGenreDTO
     {
-        
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

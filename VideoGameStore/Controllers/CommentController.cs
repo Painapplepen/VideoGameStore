@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using VideoGameStore.Domain.Core.Models;
+using VideoGameStore.Domain.Core.DTO;
+using VideoGameStore.Domain.Core.Models.Comment;
 using VideoGameStore.Services.Interfaces;
 
 namespace VideoGameStore.Controllers
@@ -10,12 +12,15 @@ namespace VideoGameStore.Controllers
     [ApiController]
     public class CommentController : ControllerBase
     {
-        private readonly IService<Comment> _service;
-        private readonly ILogger<Comment> _logger;
-        public CommentController(IService<Comment> service, ILogger<Comment> logger)
+
+        private readonly IService<CommentDTO> _service;
+        private readonly ILogger<CommentDTO> _logger;
+        private IMapper _mapper;
+        public CommentController(IService<CommentDTO> service, ILogger<CommentDTO> logger, IMapper mapper)
         {
             _service = service;
             _logger = logger;
+            _mapper = mapper;
         }
         [HttpGet]
         public IActionResult Get()
@@ -30,15 +35,15 @@ namespace VideoGameStore.Controllers
             return Ok(_service.Get(id));
         }
         [HttpPost]
-        public IActionResult Post([FromBody] Comment comment)
+        public IActionResult Post([FromBody] CommentCreateModel model)
         {
-            _logger.LogInformation($"Create new company: {HttpContext.Request.Query} ");
-            if (_service.Create(comment))
+            _logger.LogInformation($"Create new videoGame : {HttpContext.Request.Query} ");
+            if (_service.Create(_mapper.Map<CommentDTO>(model)))
                 return Ok();
             return BadRequest();
         }
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete([FromRoute] int id)
         {
             _logger.LogInformation($"Delete {id} object");
             if (_service.Delete(id))
@@ -46,10 +51,10 @@ namespace VideoGameStore.Controllers
             return BadRequest();
         }
         [HttpPut]
-        public IActionResult Update([FromBody] Comment comment)
+        public IActionResult Update([FromBody] CommentUpdateModel model)
         {
-            _logger.LogInformation($"Update new company: {HttpContext.Request.Query} ");
-            if (_service.Update(comment))
+            _logger.LogInformation($"Update new videoGame : {HttpContext.Request.Query} ");
+            if (_service.Update(_mapper.Map<CommentDTO>(model)))
                 return Ok();
             return BadRequest();
         }

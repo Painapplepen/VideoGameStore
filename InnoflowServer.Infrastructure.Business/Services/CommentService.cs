@@ -1,42 +1,94 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VideoGameStore.Domain.Core.Models;
+using VideoGameStore.Domain.Core.DTO;
+using VideoGameStore.Domain.Core.Entities;
 using VideoGameStore.Domain.Interface;
 using VideoGameStore.Services.Interfaces;
 
 namespace InnoflowServer.Infrastructure.Business.Services
 {
-    public class CommentService : IService<Comment>
+    public class CommentService : IService<CommentDTO>
     {
-        private readonly IRepository<Comment> comments;
-        public CommentService(IRepository<Comment> commentRepository)
+        private IUnitOfWork db { get; set; }
+        private IMapper _mapper;
+
+        public CommentService(IUnitOfWork uow, IMapper mapper)
         {
-            comments = commentRepository;
+            _mapper = mapper;
+            db = uow;
         }
-        public IEnumerable<Comment> GetAll()
+
+        public IEnumerable<CommentDTO> GetAll()
         {
-            return comments.GetAll();
+            return _mapper.Map<IEnumerable<Comment>, List<CommentDTO>>(db.Comments.GetAll());
         }
-        public bool Create(Comment comment)
+
+        public bool Create(CommentDTO commentDTO)
         {
-            comments.Create(comment);
+            var comment = db.Comments.Get(commentDTO.Id);
+
+            if (comment != null)
+            {
+                return false;
+            }
+
+            comment = new Comment
+            {
+                UserId = commentDTO.UserId,
+                Com = commentDTO.Com
+            };
+
+            db.Comments.Create(comment);
+            db.Save();
             return true;
         }
-        public Comment Get(int id)
+
+        public CommentDTO Get(int id)
         {
-            return comments.Get(id);
+            var comment = db.Comments.Get(id);
+
+            if (comment == null)
+            {
+                return null;
+            }
+
+            return _mapper.Map<Comment, CommentDTO>(db.Comments.Get(id));
         }
-        public bool Update(Comment comment)
+
+        public bool Update(CommentDTO commentDTO)
         {
-            comments.Update(comment);
+            var comment = db.Comments.Get(commentDTO.Id);
+
+            if (comment == null)
+            {
+                return false;
+            }
+
+            comment = new Comment
+            {
+                Com = commentDTO.Com
+            };
+
+            db.Comments.Update(comment);
+            db.Save();
             return true;
         }
+
         public bool Delete(int id)
         {
-            comments.Delete(id);
+            Comment comment = db.Comments.Get(id);
+
+            if (comment == null)
+            {
+                return false;
+
+            }
+            db.Comments.Delete(id);
+            db.Save();
             return true;
         }
     }

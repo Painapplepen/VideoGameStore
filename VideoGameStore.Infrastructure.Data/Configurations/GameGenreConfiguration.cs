@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VideoGameStore.Domain.Core.Models;
+using VideoGameStore.Domain.Core.Entities;
 
 namespace VideoGameStore.Infrastructure.Data.Configurations
 {

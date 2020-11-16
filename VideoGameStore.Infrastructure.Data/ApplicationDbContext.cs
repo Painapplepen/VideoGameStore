@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using VideoGameStore.Domain.Core.Models;
+using VideoGameStore.Domain.Core.Entities;
 using VideoGameStore.Infrastructure.Data.Configurations;
 
 namespace VideoGameStore.Infrastructure.Data

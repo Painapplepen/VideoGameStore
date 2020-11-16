@@ -750,11 +750,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj",
+      "projectUniqueName": "D:\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj",
       "projectName": "VideoGameStore.Domain.Core",
-      "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj",
+      "projectPath": "D:\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj",
       "packagesPath": "C:\\Users\\sanin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Core\\obj\\",
+      "outputPath": "D:\\VideoGameStore\\VideoGameStore.Domain.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using VideoGameStore.Domain.Core.Models;
+using VideoGameStore.Domain.Core.DTO;
+using VideoGameStore.Domain.Core.Models.Order;
 using VideoGameStore.Services.Interfaces;
 
 namespace VideoGameStore.Controllers
@@ -10,12 +12,14 @@ namespace VideoGameStore.Controllers
     [ApiController]
     public class OrderController : ControllerBase
     {
-        private readonly IService<Order> _service;
-        private readonly ILogger<Order> _logger;
-        public OrderController(IService<Order> service, ILogger<Order> logger)
+        private readonly IService<OrderDTO> _service;
+        private readonly ILogger<OrderDTO> _logger;
+        private IMapper _mapper;
+        public OrderController(IService<OrderDTO> service, ILogger<OrderDTO> logger, IMapper mapper)
         {
             _service = service;
             _logger = logger;
+            _mapper = mapper;
         }
         [HttpGet]
         public IActionResult Get()
@@ -30,15 +34,15 @@ namespace VideoGameStore.Controllers
             return Ok(_service.Get(id));
         }
         [HttpPost]
-        public IActionResult Post([FromBody] Order order)
+        public IActionResult Post([FromBody] OrderCreateModel model)
         {
-            _logger.LogInformation($"Create new order: {HttpContext.Request.Query} ");
-            if (_service.Create(order))
+            _logger.LogInformation($"Create new videoGame : {HttpContext.Request.Query} ");
+            if (_service.Create(_mapper.Map<OrderDTO>(model)))
                 return Ok();
             return BadRequest();
         }
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete([FromRoute] int id)
         {
             _logger.LogInformation($"Delete {id} object");
             if (_service.Delete(id))
@@ -46,10 +50,10 @@ namespace VideoGameStore.Controllers
             return BadRequest();
         }
         [HttpPut]
-        public IActionResult Update([FromBody] Order order)
+        public IActionResult Update([FromBody] OrderUpdateModel model)
         {
-            _logger.LogInformation($"Update new order: {HttpContext.Request.Query} ");
-            if (_service.Update(order))
+            _logger.LogInformation($"Update new videoGame : {HttpContext.Request.Query} ");
+            if (_service.Update(_mapper.Map<OrderDTO>(model)))
                 return Ok();
             return BadRequest();
         }

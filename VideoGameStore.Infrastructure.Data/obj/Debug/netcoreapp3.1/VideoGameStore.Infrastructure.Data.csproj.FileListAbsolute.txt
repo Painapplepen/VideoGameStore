@@ -12,3 +12,17 @@ C:\Users\sanin\source\repos\VideoGameStore\VideoGameStore.Infrastructure.Data\ob
 C:\Users\sanin\source\repos\VideoGameStore\VideoGameStore.Infrastructure.Data\obj\Debug\netcoreapp3.1\VideoGameStore.Infrastructure.Data.pdb
 C:\Users\sanin\source\repos\VideoGameStore\VideoGameStore.Infrastructure.Data\bin\Debug\netcoreapp3.1\VideoGameStore.Domain.Interface.dll
 C:\Users\sanin\source\repos\VideoGameStore\VideoGameStore.Infrastructure.Data\bin\Debug\netcoreapp3.1\VideoGameStore.Domain.Interface.pdb
+D:\VideoGameStore\VideoGameStore.Infrastructure.Data\bin\Debug\netcoreapp3.1\VideoGameStore.Infrastructure.Data.deps.json
+D:\VideoGameStore\VideoGameStore.Infrastructure.Data\bin\Debug\netcoreapp3.1\VideoGameStore.Infrastructure.Data.dll
+D:\VideoGameStore\VideoGameStore.Infrastructure.Data\bin\Debug\netcoreapp3.1\VideoGameStore.Infrastructure.Data.pdb
+D:\VideoGameStore\VideoGameStore.Infrastructure.Data\bin\Debug\netcoreapp3.1\VideoGameStore.Domain.Core.dll
+D:\VideoGameStore\VideoGameStore.Infrastructure.Data\bin\Debug\netcoreapp3.1\VideoGameStore.Domain.Interface.dll
+D:\VideoGameStore\VideoGameStore.Infrastructure.Data\bin\Debug\netcoreapp3.1\VideoGameStore.Domain.Core.pdb
+D:\VideoGameStore\VideoGameStore.Infrastructure.Data\bin\Debug\netcoreapp3.1\VideoGameStore.Domain.Interface.pdb
+D:\VideoGameStore\VideoGameStore.Infrastructure.Data\obj\Debug\netcoreapp3.1\VideoGameStore.Infrastructure.Data.csprojAssemblyReference.cache
+D:\VideoGameStore\VideoGameStore.Infrastructure.Data\obj\Debug\netcoreapp3.1\VideoGameStore.Infrastructure.Data.AssemblyInfoInputs.cache
+D:\VideoGameStore\VideoGameStore.Infrastructure.Data\obj\Debug\netcoreapp3.1\VideoGameStore.Infrastructure.Data.AssemblyInfo.cs
+D:\VideoGameStore\VideoGameStore.Infrastructure.Data\obj\Debug\netcoreapp3.1\VideoGameStore.Infrastructure.Data.csproj.CopyComplete
+D:\VideoGameStore\VideoGameStore.Infrastructure.Data\obj\Debug\netcoreapp3.1\VideoGameStore.Infrastructure.Data.dll
+D:\VideoGameStore\VideoGameStore.Infrastructure.Data\obj\Debug\netcoreapp3.1\VideoGameStore.Infrastructure.Data.pdb
+D:\VideoGameStore\VideoGameStore.Infrastructure.Data\obj\Debug\netcoreapp3.1\VideoGameStore.Infrastructure.Data.csproj.CoreCompileInputs.cache

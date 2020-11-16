@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using VideoGameStore.Domain.Core.DTO;
 using VideoGameStore.Domain.Core.Models;
+using VideoGameStore.Domain.Core.Models.GameGenre;
 using VideoGameStore.Services.Interfaces;
 
 namespace VideoGameStore.Controllers
@@ -9,12 +12,14 @@ namespace VideoGameStore.Controllers
     [ApiController]
     public class GameGenreController : ControllerBase
     {
-        private readonly IService<GameGenre> _service;
-        private readonly ILogger<GameGenre> _logger;
-        public GameGenreController(IService<GameGenre> service, ILogger<GameGenre> logger)
+        private readonly IService<GameGenreDTO> _service;
+        private readonly ILogger<GameGenreDTO> _logger;
+        private IMapper _mapper;
+        public GameGenreController(IService<GameGenreDTO> service, ILogger<GameGenreDTO> logger, IMapper mapper)
         {
             _service = service;
             _logger = logger;
+            _mapper = mapper;
         }
         [HttpGet]
         public IActionResult Get()
@@ -29,15 +34,15 @@ namespace VideoGameStore.Controllers
             return Ok(_service.Get(id));
         }
         [HttpPost]
-        public IActionResult Post([FromBody] GameGenre gameGenre)
+        public IActionResult Post([FromBody] GameGenreCUModel model)
         {
-            _logger.LogInformation($"Create new gameGenre: {HttpContext.Request.Query} ");
-            if (_service.Create(gameGenre))
+            _logger.LogInformation($"Create new videoGame : {HttpContext.Request.Query} ");
+            if (_service.Create(_mapper.Map<GameGenreDTO>(model)))
                 return Ok();
             return BadRequest();
         }
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete([FromRoute] int id)
         {
             _logger.LogInformation($"Delete {id} object");
             if (_service.Delete(id))
@@ -45,10 +50,10 @@ namespace VideoGameStore.Controllers
             return BadRequest();
         }
         [HttpPut]
-        public IActionResult Update([FromBody] GameGenre gameGenre)
+        public IActionResult Update([FromBody] GameGenreCUModel model)
         {
-            _logger.LogInformation($"Update new gameGenre: {HttpContext.Request.Query} ");
-            if (_service.Update(gameGenre))
+            _logger.LogInformation($"Update new videoGame : {HttpContext.Request.Query} ");
+            if (_service.Update(_mapper.Map<GameGenreDTO>(model)))
                 return Ok();
             return BadRequest();
         }

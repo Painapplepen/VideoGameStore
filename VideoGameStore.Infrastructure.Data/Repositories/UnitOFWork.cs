@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VideoGameStore.Domain.Core.Models;
+using VideoGameStore.Domain.Core.Entities;
 using VideoGameStore.Domain.Interface;
 
 namespace VideoGameStore.Infrastructure.Data.Repositories
@@ -52,7 +52,7 @@ namespace VideoGameStore.Infrastructure.Data.Repositories
             } 
         }
 
-        public IRepository<VideoGame> VideoGame
+        public IRepository<VideoGame> VideoGames
         {
             get
             {
@@ -61,7 +61,7 @@ namespace VideoGameStore.Infrastructure.Data.Repositories
                 return videoGameRepository;
             }
         }
-        public IRepository<Comment> Comment
+        public IRepository<Comment> Comments
         {
             get
             {
@@ -70,7 +70,7 @@ namespace VideoGameStore.Infrastructure.Data.Repositories
                 return commentRepository;
             }
         }
-        public IRepository<Order> Order
+        public IRepository<Order> Orders
         {
             get
             {
@@ -79,7 +79,7 @@ namespace VideoGameStore.Infrastructure.Data.Repositories
                 return orderRepository;
             }
         }
-        public IRepository<GameGenre> GameGenre
+        public IRepository<GameGenre> GameGenres
         {
             get
             {
@@ -88,7 +88,7 @@ namespace VideoGameStore.Infrastructure.Data.Repositories
                 return gameGenreRepository;
             }
         }
-        public IRepository<Company> Company
+        public IRepository<Company> Companies
         {
             get
             {
@@ -96,6 +96,31 @@ namespace VideoGameStore.Infrastructure.Data.Repositories
                     companyRepository = new CompanyRepository(db);
                 return companyRepository;
             }
+        }
+
+        public void Save()
+        {
+            db.SaveChanges();
+        }
+
+        private bool disposed = false;
+
+        public virtual void Dispose(bool disposing)
+        {
+            if (!disposed)
+            {
+                if (disposing)
+                {
+                    db.Dispose();
+                }
+                disposed = true;
+            }
+        }
+
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
         }
     }
 }

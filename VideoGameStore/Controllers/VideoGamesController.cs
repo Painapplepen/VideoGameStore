@@ -1,7 +1,10 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using VideoGameStore.Domain.Core.Models;
+using VideoGameStore.Domain.Core.DTO;
+using VideoGameStore.Domain.Core.Entities;
+using VideoGameStore.Domain.Core.Models.VideoGame;
 using VideoGameStore.Services.Interfaces;
 
 namespace VideoGameStore.Controllers
@@ -10,12 +13,14 @@ namespace VideoGameStore.Controllers
     [ApiController]
     public class VideoGamesController : ControllerBase
     {
-        private readonly IService<VideoGame> _service;
-        private readonly ILogger<VideoGame> _logger;
-        public VideoGamesController(IService<VideoGame> service, ILogger<VideoGame> logger)
+        private readonly IService<VideoGameDTO> _service;
+        private readonly ILogger<VideoGameDTO> _logger;
+        private IMapper _mapper;
+        public VideoGamesController(IService<VideoGameDTO> service, ILogger<VideoGameDTO> logger, IMapper mapper)
         {
             _service = service;
             _logger = logger;
+            _mapper = mapper;
         }
         [HttpGet]
         public IActionResult Get()
@@ -30,15 +35,15 @@ namespace VideoGameStore.Controllers
             return Ok(_service.Get(id));
         }
         [HttpPost]
-        public IActionResult Post([FromBody] VideoGame videoGame)
+        public IActionResult Post([FromBody] VideoGameCreateModel model)
         {
             _logger.LogInformation($"Create new videoGame : {HttpContext.Request.Query} ");
-            if (_service.Create(videoGame))
+            if (_service.Create(_mapper.Map<VideoGameDTO>(model)))
                 return Ok();
             return BadRequest();
         }
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public IActionResult Delete([FromRoute]int id)
         {
             _logger.LogInformation($"Delete {id} object");
             if (_service.Delete(id))
@@ -46,10 +51,10 @@ namespace VideoGameStore.Controllers
             return BadRequest();
         }
         [HttpPut]
-        public IActionResult Update([FromBody] VideoGame videoGame)
+        public IActionResult Update([FromBody] VideoGameUpdateModel model)
         {
             _logger.LogInformation($"Update new videoGame : {HttpContext.Request.Query} ");
-            if (_service.Update(videoGame))
+            if (_service.Update(_mapper.Map<VideoGameDTO>(model)))
                 return Ok();
             return BadRequest();
         }

@@ -1,3 +1,4 @@
+using AutoMapper;
 using InnoflowServer.Infrastructure.Business.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -7,10 +8,13 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using VideoGameStore.Domain.Core.DTO;
+using VideoGameStore.Domain.Core.Entities;
 using VideoGameStore.Domain.Core.Models;
 using VideoGameStore.Domain.Interface;
 using VideoGameStore.Infrastructure.Data;
 using VideoGameStore.Infrastructure.Data.Repositories;
+using VideoGameStore.Mappings;
 using VideoGameStore.Services.Interfaces;
 
 namespace VideoGameStore
@@ -47,11 +51,11 @@ namespace VideoGameStore
             services.AddTransient<IRepository<Comment>, CommentRepository>();
             services.AddTransient<IRepository<Company>, CompanyRepository>();
 
-            services.AddTransient<IService<VideoGame>, VideoGameService>();
-            services.AddTransient<IService<GameGenre>, GameGenreService>();
-            services.AddTransient<IService<Order>, OrderService>();
-            services.AddTransient<IService<Comment>, CommentService>();
-            services.AddTransient<IService<Company>, CompanyService>();
+            services.AddTransient<IService<VideoGameDTO>, VideoGameService>();
+            services.AddTransient<IService<GameGenreDTO>, GameGenreService>();
+            services.AddTransient<IService<OrderDTO>, OrderService>();
+            services.AddTransient<IService<CommentDTO>, CommentService>();
+            services.AddTransient<IService<CompanyDTO>, CompanyService>();
 
             services.AddTransient<IUserService, UserService>();
             services.AddControllers();
@@ -60,6 +64,13 @@ namespace VideoGameStore
             {
                 s.SwaggerDoc("v1", new OpenApiInfo { Title = "Video game store", Version = "v1" });
                 });
+            var mapperConfig = new MapperConfiguration(mc =>
+            {
+                mc.AddProfile(new MappingProfile());
+            });
+
+            IMapper mapper = mapperConfig.CreateMapper();
+            services.AddSingleton(mapper);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

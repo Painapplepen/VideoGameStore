@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6+CljWvwdBstQMytn41WU8v3tHVAWdcG9Mp0cPxuZHwEed3vcq4IFu7Clq0+CuCmHa7pXtSbCK6ZoHC+PTuMNA==",
+  "dgSpecHash": "mf8BNI/ZdM1gp4G7ZVdVFyTfdXIslFZm11MBHiy7Ho7fAEYDDAtp+wYSZEyiY6k4a/9hAWuF43a0S1BEhLFEMg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj",
+  "projectFilePath": "D:\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sanin\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.0\\microsoft.aspnetcore.cryptography.internal.5.0.0.nupkg.sha512",
     "C:\\Users\\sanin\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.0\\microsoft.aspnetcore.cryptography.keyderivation.5.0.0.nupkg.sha512",

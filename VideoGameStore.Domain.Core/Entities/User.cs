@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace VideoGameStore.Domain.Core.Models
+namespace VideoGameStore.Domain.Core.Entities
 {
     public class User : IdentityUser
     {

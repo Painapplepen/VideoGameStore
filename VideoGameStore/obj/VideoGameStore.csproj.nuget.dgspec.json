@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore\\VideoGameStore.csproj": {}
+    "D:\\VideoGameStore\\VideoGameStore\\VideoGameStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\InnoflowServer.Infrastructure.Business.csproj": {
+    "D:\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\InnoflowServer.Infrastructure.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\InnoflowServer.Infrastructure.Business.csproj",
+        "projectUniqueName": "D:\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\InnoflowServer.Infrastructure.Business.csproj",
         "projectName": "InnoflowServer.Infrastructure.Business",
-        "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\InnoflowServer.Infrastructure.Business.csproj",
+        "projectPath": "D:\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\InnoflowServer.Infrastructure.Business.csproj",
         "packagesPath": "C:\\Users\\sanin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\obj\\",
+        "outputPath": "D:\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -32,17 +32,17 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj": {
-                "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj"
+              "D:\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj": {
+                "projectPath": "D:\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj"
               },
-              "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Interface\\VideoGameStore.Domain.Interface.csproj": {
-                "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Interface\\VideoGameStore.Domain.Interface.csproj"
+              "D:\\VideoGameStore\\VideoGameStore.Domain.Interface\\VideoGameStore.Domain.Interface.csproj": {
+                "projectPath": "D:\\VideoGameStore\\VideoGameStore.Domain.Interface\\VideoGameStore.Domain.Interface.csproj"
               },
-              "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Infrastructure.Data\\VideoGameStore.Infrastructure.Data.csproj": {
-                "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Infrastructure.Data\\VideoGameStore.Infrastructure.Data.csproj"
+              "D:\\VideoGameStore\\VideoGameStore.Infrastructure.Data\\VideoGameStore.Infrastructure.Data.csproj": {
+                "projectPath": "D:\\VideoGameStore\\VideoGameStore.Infrastructure.Data\\VideoGameStore.Infrastructure.Data.csproj"
               },
-              "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Services.Interfaces\\VideoGameStore.Services.Interfaces.csproj": {
-                "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Services.Interfaces\\VideoGameStore.Services.Interfaces.csproj"
+              "D:\\VideoGameStore\\VideoGameStore.Services.Interfaces\\VideoGameStore.Services.Interfaces.csproj": {
+                "projectPath": "D:\\VideoGameStore\\VideoGameStore.Services.Interfaces\\VideoGameStore.Services.Interfaces.csproj"
               }
             }
           }
@@ -74,14 +74,14 @@
         }
       }
     },
-    "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj": {
+    "D:\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj",
+        "projectUniqueName": "D:\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj",
         "projectName": "VideoGameStore.Domain.Core",
-        "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj",
+        "projectPath": "D:\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj",
         "packagesPath": "C:\\Users\\sanin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Core\\obj\\",
+        "outputPath": "D:\\VideoGameStore\\VideoGameStore.Domain.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -137,14 +137,14 @@
         }
       }
     },
-    "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Interface\\VideoGameStore.Domain.Interface.csproj": {
+    "D:\\VideoGameStore\\VideoGameStore.Domain.Interface\\VideoGameStore.Domain.Interface.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Interface\\VideoGameStore.Domain.Interface.csproj",
+        "projectUniqueName": "D:\\VideoGameStore\\VideoGameStore.Domain.Interface\\VideoGameStore.Domain.Interface.csproj",
         "projectName": "VideoGameStore.Domain.Interface",
-        "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Interface\\VideoGameStore.Domain.Interface.csproj",
+        "projectPath": "D:\\VideoGameStore\\VideoGameStore.Domain.Interface\\VideoGameStore.Domain.Interface.csproj",
         "packagesPath": "C:\\Users\\sanin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Interface\\obj\\",
+        "outputPath": "D:\\VideoGameStore\\VideoGameStore.Domain.Interface\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -165,8 +165,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj": {
-                "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj"
+              "D:\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj": {
+                "projectPath": "D:\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj"
               }
             }
           }
@@ -208,14 +208,14 @@
         }
       }
     },
-    "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Infrastructure.Data\\VideoGameStore.Infrastructure.Data.csproj": {
+    "D:\\VideoGameStore\\VideoGameStore.Infrastructure.Data\\VideoGameStore.Infrastructure.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Infrastructure.Data\\VideoGameStore.Infrastructure.Data.csproj",
+        "projectUniqueName": "D:\\VideoGameStore\\VideoGameStore.Infrastructure.Data\\VideoGameStore.Infrastructure.Data.csproj",
         "projectName": "VideoGameStore.Infrastructure.Data",
-        "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Infrastructure.Data\\VideoGameStore.Infrastructure.Data.csproj",
+        "projectPath": "D:\\VideoGameStore\\VideoGameStore.Infrastructure.Data\\VideoGameStore.Infrastructure.Data.csproj",
         "packagesPath": "C:\\Users\\sanin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Infrastructure.Data\\obj\\",
+        "outputPath": "D:\\VideoGameStore\\VideoGameStore.Infrastructure.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -236,11 +236,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj": {
-                "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj"
+              "D:\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj": {
+                "projectPath": "D:\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj"
               },
-              "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Interface\\VideoGameStore.Domain.Interface.csproj": {
-                "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Interface\\VideoGameStore.Domain.Interface.csproj"
+              "D:\\VideoGameStore\\VideoGameStore.Domain.Interface\\VideoGameStore.Domain.Interface.csproj": {
+                "projectPath": "D:\\VideoGameStore\\VideoGameStore.Domain.Interface\\VideoGameStore.Domain.Interface.csproj"
               }
             }
           }
@@ -254,6 +254,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -290,14 +294,14 @@
         }
       }
     },
-    "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Services.Interfaces\\VideoGameStore.Services.Interfaces.csproj": {
+    "D:\\VideoGameStore\\VideoGameStore.Services.Interfaces\\VideoGameStore.Services.Interfaces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Services.Interfaces\\VideoGameStore.Services.Interfaces.csproj",
+        "projectUniqueName": "D:\\VideoGameStore\\VideoGameStore.Services.Interfaces\\VideoGameStore.Services.Interfaces.csproj",
         "projectName": "VideoGameStore.Services.Interfaces",
-        "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Services.Interfaces\\VideoGameStore.Services.Interfaces.csproj",
+        "projectPath": "D:\\VideoGameStore\\VideoGameStore.Services.Interfaces\\VideoGameStore.Services.Interfaces.csproj",
         "packagesPath": "C:\\Users\\sanin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Services.Interfaces\\obj\\",
+        "outputPath": "D:\\VideoGameStore\\VideoGameStore.Services.Interfaces\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -318,8 +322,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj": {
-                "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj"
+              "D:\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj": {
+                "projectPath": "D:\\VideoGameStore\\VideoGameStore.Domain.Core\\VideoGameStore.Domain.Core.csproj"
               }
             }
           }
@@ -351,14 +355,14 @@
         }
       }
     },
-    "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore\\VideoGameStore.csproj": {
+    "D:\\VideoGameStore\\VideoGameStore\\VideoGameStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore\\VideoGameStore.csproj",
+        "projectUniqueName": "D:\\VideoGameStore\\VideoGameStore\\VideoGameStore.csproj",
         "projectName": "VideoGameStore",
-        "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore\\VideoGameStore.csproj",
+        "projectPath": "D:\\VideoGameStore\\VideoGameStore\\VideoGameStore.csproj",
         "packagesPath": "C:\\Users\\sanin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore\\obj\\",
+        "outputPath": "D:\\VideoGameStore\\VideoGameStore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -379,14 +383,14 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\InnoflowServer.Infrastructure.Business.csproj": {
-                "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\InnoflowServer.Infrastructure.Business.csproj"
+              "D:\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\InnoflowServer.Infrastructure.Business.csproj": {
+                "projectPath": "D:\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\InnoflowServer.Infrastructure.Business.csproj"
               },
-              "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Infrastructure.Data\\VideoGameStore.Infrastructure.Data.csproj": {
-                "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Infrastructure.Data\\VideoGameStore.Infrastructure.Data.csproj"
+              "D:\\VideoGameStore\\VideoGameStore.Infrastructure.Data\\VideoGameStore.Infrastructure.Data.csproj": {
+                "projectPath": "D:\\VideoGameStore\\VideoGameStore.Infrastructure.Data\\VideoGameStore.Infrastructure.Data.csproj"
               },
-              "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Services.Interfaces\\VideoGameStore.Services.Interfaces.csproj": {
-                "projectPath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Services.Interfaces\\VideoGameStore.Services.Interfaces.csproj"
+              "D:\\VideoGameStore\\VideoGameStore.Services.Interfaces\\VideoGameStore.Services.Interfaces.csproj": {
+                "projectPath": "D:\\VideoGameStore\\VideoGameStore.Services.Interfaces\\VideoGameStore.Services.Interfaces.csproj"
               }
             }
           }
@@ -400,6 +404,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",

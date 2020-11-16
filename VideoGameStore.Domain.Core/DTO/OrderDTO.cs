@@ -8,6 +8,10 @@ namespace VideoGameStore.Domain.Core.DTO
 {
     public class OrderDTO
     {
-        
+        public int Id { get; set; }
+
+        public DateTime DateTime { get; set; }
+
+        public int VideoGameId { get; set; }
     }
 }

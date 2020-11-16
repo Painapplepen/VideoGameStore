@@ -1,42 +1,93 @@
-﻿using System;
+﻿using AutoMapper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VideoGameStore.Domain.Core.Models;
+using VideoGameStore.Domain.Core.DTO;
+using VideoGameStore.Domain.Core.Entities;
 using VideoGameStore.Domain.Interface;
 using VideoGameStore.Services.Interfaces;
 
 namespace InnoflowServer.Infrastructure.Business.Services
 {
-    public class GameGenreService : IService<GameGenre>
+    public class GameGenreService : IService<GameGenreDTO>
     {
-        private readonly IRepository<GameGenre> gameGenres;
-        public GameGenreService(IRepository<GameGenre> gameGenreRepository)
+        private IUnitOfWork db { get; set; }
+        private IMapper _mapper;
+
+        public GameGenreService(IUnitOfWork uow, IMapper mapper)
         {
-            gameGenres = gameGenreRepository;
+            _mapper = mapper;
+            db = uow;
         }
-        public IEnumerable<GameGenre> GetAll()
+
+        public IEnumerable<GameGenreDTO> GetAll()
         {
-            return gameGenres.GetAll();
+            return _mapper.Map<IEnumerable<GameGenre>, List<GameGenreDTO>>(db.GameGenres.GetAll());
         }
-        public bool Create(GameGenre gameGenre)
+
+        public bool Create(GameGenreDTO gameGenreDTO)
         {
-            gameGenres.Create(gameGenre);
+            var gameGenre = db.GameGenres.Get(gameGenreDTO.Id);
+
+            if (gameGenre != null)
+            {
+                return false;
+            }
+
+            gameGenre = new GameGenre
+            {
+                Name = gameGenreDTO.Name
+            };
+
+            db.GameGenres.Create(gameGenre);
+            db.Save();
             return true;
         }
-        public GameGenre Get(int id)
+
+        public GameGenreDTO Get(int id)
         {
-            return gameGenres.Get(id);
+            var gameGenre = db.Orders.Get(id);
+
+            if (gameGenre == null)
+            {
+                return null;
+            }
+
+            return _mapper.Map<GameGenre, GameGenreDTO>(db.GameGenres.Get(id));
         }
-        public bool Update(GameGenre gameGenre)
+
+        public bool Update(GameGenreDTO gameGenreDTO)
         {
-            gameGenres.Update(gameGenre);
+            var gameGenre = db.GameGenres.Get(gameGenreDTO.Id);
+
+            if (gameGenre == null)
+            {
+                return false;
+            }
+
+            gameGenre = new GameGenre
+            {
+                Name = gameGenreDTO.Name
+            };
+
+            db.GameGenres.Update(gameGenre);
+            db.Save();
             return true;
         }
+
         public bool Delete(int id)
         {
-            gameGenres.Delete(id);
+            GameGenre gameGenre = db.GameGenres.Get(id);
+
+            if (gameGenre == null)
+            {
+                return false;
+
+            }
+            db.GameGenres.Delete(id);
+            db.Save();
             return true;
         }
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8pXqP8AMXnSjQb4tvG1oHK9mqnogqn/AqAH9xfKG0s2n0FDSTAaDWAcSOw/X7hO0SS/y8Gmg5BoZUPtVAVbDjA==",
+  "dgSpecHash": "/++RxOse50kF3mNIQ82GUvjFm9g6X67D3qEd3wkAXDy9vgDZs74NQ4R01WyVG/cDFkBbBUar1mTQZXaGUo7pnw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\sanin\\source\\repos\\VideoGameStore\\VideoGameStore.Domain.Interface\\VideoGameStore.Domain.Interface.csproj",
+  "projectFilePath": "D:\\VideoGameStore\\VideoGameStore.Domain.Interface\\VideoGameStore.Domain.Interface.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sanin\\.nuget\\packages\\microsoft.aspnetcore.authentication\\2.2.0\\microsoft.aspnetcore.authentication.2.2.0.nupkg.sha512",
     "C:\\Users\\sanin\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
