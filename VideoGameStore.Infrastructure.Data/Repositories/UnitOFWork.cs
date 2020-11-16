@@ -22,6 +22,7 @@ namespace VideoGameStore.Infrastructure.Data.Repositories
         private OrderRepository orderRepository;
         private GameGenreRepository gameGenreRepository;
         private CompanyRepository companyRepository;
+       
         public UnitOFWork(ApplicationDbContext context, UserManager<User> userManager,
             RoleManager<IdentityRole> roleManager, SignInManager<User> signInManager)
         {
@@ -30,6 +31,7 @@ namespace VideoGameStore.Infrastructure.Data.Repositories
             _roleManager = roleManager;
             _signInManager = signInManager;
         }
+       
         public UserManager<User> Users 
         { 
             get 
@@ -37,6 +39,7 @@ namespace VideoGameStore.Infrastructure.Data.Repositories
                 return _userManager; 
             } 
         }
+       
         public RoleManager<IdentityRole> Roles
         { 
             get 
@@ -44,6 +47,7 @@ namespace VideoGameStore.Infrastructure.Data.Repositories
                 return _roleManager; 
             } 
         }
+      
         public SignInManager<User> SignIn 
         {
             get 
@@ -61,6 +65,7 @@ namespace VideoGameStore.Infrastructure.Data.Repositories
                 return videoGameRepository;
             }
         }
+       
         public IRepository<Comment> Comments
         {
             get
@@ -70,6 +75,7 @@ namespace VideoGameStore.Infrastructure.Data.Repositories
                 return commentRepository;
             }
         }
+      
         public IRepository<Order> Orders
         {
             get
@@ -79,6 +85,7 @@ namespace VideoGameStore.Infrastructure.Data.Repositories
                 return orderRepository;
             }
         }
+       
         public IRepository<GameGenre> GameGenres
         {
             get
@@ -88,6 +95,7 @@ namespace VideoGameStore.Infrastructure.Data.Repositories
                 return gameGenreRepository;
             }
         }
+       
         public IRepository<Company> Companies
         {
             get

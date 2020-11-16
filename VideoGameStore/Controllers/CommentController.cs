@@ -24,18 +24,21 @@ namespace VideoGameStore.Controllers
             _logger = logger;
             _mapper = mapper;
         }
+
         [HttpGet]
         public IActionResult Get()
         {
             _logger.LogInformation("Get all objects");
             return Ok(_service.GetAll());
         }
+
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
             _logger.LogInformation($"Get {id} object");
             return Ok(_service.Get(id));
         }
+
         [HttpPost]
         public IActionResult Post([FromBody] CommentCreateModel model)
         {
@@ -44,6 +47,7 @@ namespace VideoGameStore.Controllers
                 return Ok();
             return BadRequest();
         }
+
         [HttpDelete("{id}")]
         public IActionResult Delete([FromRoute] int id)
         {
@@ -52,6 +56,7 @@ namespace VideoGameStore.Controllers
                 return Ok();
             return BadRequest();
         }
+
         [HttpPut]
         public IActionResult Update([FromBody] CommentUpdateModel model)
         {

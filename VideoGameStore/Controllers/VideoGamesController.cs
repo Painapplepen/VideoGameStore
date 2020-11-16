@@ -18,24 +18,28 @@ namespace VideoGameStore.Controllers
         private readonly IService<VideoGameDTO> _service;
         private readonly ILogger<VideoGameDTO> _logger;
         private IMapper _mapper;
+
         public VideoGamesController(IService<VideoGameDTO> service, ILogger<VideoGameDTO> logger, IMapper mapper)
         {
             _service = service;
             _logger = logger;
             _mapper = mapper;
         }
+
         [HttpGet]
         public IActionResult Get()
         {
             _logger.LogInformation("Get all objects");
             return Ok(_service.GetAll());
         }
+
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
             _logger.LogInformation($"Get {id} object");
             return Ok(_service.Get(id));
         }
+
         [HttpPost]
         public IActionResult Post([FromBody] VideoGameCreateModel model)
         {
@@ -44,6 +48,7 @@ namespace VideoGameStore.Controllers
                 return Ok();
             return BadRequest();
         }
+
         [HttpDelete("{id}")]
         public IActionResult Delete([FromRoute]int id)
         {
@@ -52,6 +57,7 @@ namespace VideoGameStore.Controllers
                 return Ok();
             return BadRequest();
         }
+
         [HttpPut]
         public IActionResult Update([FromBody] VideoGameUpdateModel model)
         {

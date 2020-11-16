@@ -18,6 +18,7 @@ namespace VideoGameStore.Controllers
         private IUserService _service;
         private ILogger<User> _logger;
         private IMapper _mapper;
+
         public AcountController(IUserService service, ILogger<User> logger, IMapper mapper)
         {
             _mapper = mapper;

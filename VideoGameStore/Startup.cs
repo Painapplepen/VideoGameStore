@@ -74,6 +74,7 @@ namespace VideoGameStore
             {
                 s.SwaggerDoc("v1", new OpenApiInfo { Title = "Video game store", Version = "v1" });
                 });
+
             var mapperConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new MappingProfile());
@@ -104,6 +105,7 @@ namespace VideoGameStore
             });
 
             app.UseSwagger();
+
             app.UseSwaggerUI(s =>
             {
                 s.SwaggerEndpoint("/swagger/v1/swagger.json", "Video game store V1");
