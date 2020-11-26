@@ -22,14 +22,14 @@ namespace InnoflowServer.Infrastructure.Business.Services
             db = uow;
         }
 
-        public IEnumerable<CommentDTO> GetAll()
+        public async Task<IEnumerable<CommentDTO>> GetAllAsync()
         {
-            return _mapper.Map<IEnumerable<Comment>, List<CommentDTO>>(db.Comments.GetAll());
+            return _mapper.Map<IEnumerable<Comment>, List<CommentDTO>>(await db.Comments.GetAllAsync());
         }
 
-        public bool Create(CommentDTO commentDTO)
+        public async Task<bool> CreateAsync(CommentDTO commentDTO)
         {
-            var comment = db.Comments.Get(commentDTO.Id);
+            var comment = await db.Comments.GetAsync(commentDTO.Id);
 
             if (comment != null)
             {
@@ -42,26 +42,26 @@ namespace InnoflowServer.Infrastructure.Business.Services
                 Com = commentDTO.Com
             };
 
-            db.Comments.Create(comment);
-            db.Save();
+            await db.Comments.CreateAsync(comment);
+
             return true;
         }
 
-        public CommentDTO Get(int id)
+        public async Task<CommentDTO> GetAsync(int id)
         {
-            var comment = db.Comments.Get(id);
+            var comment = await db.Comments.GetAsync(id);
 
             if (comment == null)
             {
                 return null;
             }
 
-            return _mapper.Map<Comment, CommentDTO>(db.Comments.Get(id));
+            return _mapper.Map<Comment, CommentDTO>(await db.Comments.GetAsync(id));
         }
 
-        public bool Update(CommentDTO commentDTO)
+        public async Task<bool> UpdateAsync(CommentDTO commentDTO)
         {
-            var comment = db.Comments.Get(commentDTO.Id);
+            var comment = await db.Comments.GetAsync(commentDTO.Id);
 
             if (comment == null)
             {
@@ -73,23 +73,22 @@ namespace InnoflowServer.Infrastructure.Business.Services
                 Com = commentDTO.Com
             };
 
-            db.Comments.Update(comment);
-            db.Save();
+            await db.Comments.UpdateAsync(comment);
             return true;
         }
 
-        public bool Delete(int id)
+        public async Task<bool> DeleteAsync(int id)
         {
-            Comment comment = db.Comments.Get(id);
+            var comment = await db.Comments.GetAsync(id);
 
             if (comment == null)
             {
                 return false;
 
             }
-            db.Comments.Delete(id);
-            db.Save();
-            return true;
+
+            return await db.Comments.DeleteAsync(id);
         }
     }
 }
+

@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VideoGameStore.Domain.Core.DTO;
-using VideoGameStore.Domain.Core.Models;
 
 namespace VideoGameStore.Services.Interfaces
 {

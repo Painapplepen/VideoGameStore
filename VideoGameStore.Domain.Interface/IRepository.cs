@@ -1,17 +1,19 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace VideoGameStore.Domain.Interface
 {
-    public interface IRepository<T> where T : class
+    public interface IRepository<TEntity> where TEntity : class
     {
-        IEnumerable<T> GetAll();
+        Task<IEnumerable<TEntity>> GetAllAsync();
+
+        Task<TEntity> GetAsync(int id);
         
-        T Get(int id);
+        Task CreateAsync(TEntity item);
         
-        void Create(T item);
+        Task UpdateAsync(TEntity item);
         
-        void Update(T item);
-        
-        void Delete(int id);
+        Task<bool> DeleteAsync(int id);
     }
 }

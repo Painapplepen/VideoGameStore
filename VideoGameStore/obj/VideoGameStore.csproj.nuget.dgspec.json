@@ -4,12 +4,12 @@
     "D:\\VideoGameStore\\VideoGameStore\\VideoGameStore.csproj": {}
   },
   "projects": {
-    "D:\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\InnoflowServer.Infrastructure.Business.csproj": {
+    "D:\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\VideoGameStore.Infrastructure.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\InnoflowServer.Infrastructure.Business.csproj",
-        "projectName": "InnoflowServer.Infrastructure.Business",
-        "projectPath": "D:\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\InnoflowServer.Infrastructure.Business.csproj",
+        "projectUniqueName": "D:\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\VideoGameStore.Infrastructure.Business.csproj",
+        "projectName": "VideoGameStore.Infrastructure.Business",
+        "projectPath": "D:\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\VideoGameStore.Infrastructure.Business.csproj",
         "packagesPath": "C:\\Users\\sanin\\.nuget\\packages\\",
         "outputPath": "D:\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\obj\\",
         "projectStyle": "PackageReference",
@@ -383,8 +383,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\InnoflowServer.Infrastructure.Business.csproj": {
-                "projectPath": "D:\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\InnoflowServer.Infrastructure.Business.csproj"
+              "D:\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\VideoGameStore.Infrastructure.Business.csproj": {
+                "projectPath": "D:\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\VideoGameStore.Infrastructure.Business.csproj"
               },
               "D:\\VideoGameStore\\VideoGameStore.Infrastructure.Data\\VideoGameStore.Infrastructure.Data.csproj": {
                 "projectPath": "D:\\VideoGameStore\\VideoGameStore.Infrastructure.Data\\VideoGameStore.Infrastructure.Data.csproj"

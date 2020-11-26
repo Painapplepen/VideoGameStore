@@ -9,7 +9,9 @@ namespace VideoGameStore.Domain.Core.Entities
     public class GameGenre
     {
         public int Id { get; set; }
+
         public string Name { get; set; }
+
         public List<VideoGame> VideoGames { get; set; }
     }
 }

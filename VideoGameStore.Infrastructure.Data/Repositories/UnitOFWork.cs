@@ -17,11 +17,11 @@ namespace VideoGameStore.Infrastructure.Data.Repositories
         private RoleManager<IdentityRole> _roleManager;
         private SignInManager<User> _signInManager;
 
-        private VideoGameRepository videoGameRepository;
-        private CommentRepository commentRepository;
-        private OrderRepository orderRepository;
-        private GameGenreRepository gameGenreRepository;
-        private CompanyRepository companyRepository;
+        private DbRepository<VideoGame> videoGameRepository;
+        private DbRepository<Comment> commentRepository;
+        private DbRepository<Order> orderRepository;
+        private DbRepository<GameGenre> gameGenreRepository;
+        private DbRepository<Company> companyRepository;
        
         public UnitOFWork(ApplicationDbContext context, UserManager<User> userManager,
             RoleManager<IdentityRole> roleManager, SignInManager<User> signInManager)
@@ -61,7 +61,7 @@ namespace VideoGameStore.Infrastructure.Data.Repositories
             get
             {
                 if (videoGameRepository == null)
-                    videoGameRepository = new VideoGameRepository(db);
+                    videoGameRepository = new DbRepository<VideoGame>(db);
                 return videoGameRepository;
             }
         }
@@ -71,7 +71,7 @@ namespace VideoGameStore.Infrastructure.Data.Repositories
             get
             {
                 if (commentRepository == null)
-                    commentRepository = new CommentRepository(db);
+                    commentRepository = new DbRepository<Comment>(db);
                 return commentRepository;
             }
         }
@@ -81,7 +81,7 @@ namespace VideoGameStore.Infrastructure.Data.Repositories
             get
             {
                 if (orderRepository == null)
-                    orderRepository = new OrderRepository(db);
+                    orderRepository = new DbRepository<Order>(db);
                 return orderRepository;
             }
         }
@@ -91,7 +91,7 @@ namespace VideoGameStore.Infrastructure.Data.Repositories
             get
             {
                 if (gameGenreRepository == null)
-                    gameGenreRepository = new GameGenreRepository(db);
+                    gameGenreRepository = new DbRepository<GameGenre>(db);
                 return gameGenreRepository;
             }
         }
@@ -101,7 +101,7 @@ namespace VideoGameStore.Infrastructure.Data.Repositories
             get
             {
                 if (companyRepository == null)
-                    companyRepository = new CompanyRepository(db);
+                    companyRepository = new DbRepository<Company>(db);
                 return companyRepository;
             }
         }

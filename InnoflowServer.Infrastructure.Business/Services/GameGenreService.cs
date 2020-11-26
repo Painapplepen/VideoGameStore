@@ -22,14 +22,14 @@ namespace InnoflowServer.Infrastructure.Business.Services
             db = uow;
         }
 
-        public IEnumerable<GameGenreDTO> GetAll()
+        public async Task<IEnumerable<GameGenreDTO>> GetAllAsync()
         {
-            return _mapper.Map<IEnumerable<GameGenre>, List<GameGenreDTO>>(db.GameGenres.GetAll());
+            return _mapper.Map<IEnumerable<GameGenre>, List<GameGenreDTO>>(await db.GameGenres.GetAllAsync());
         }
 
-        public bool Create(GameGenreDTO gameGenreDTO)
+        public async Task<bool> CreateAsync(GameGenreDTO gameGenreDTO)
         {
-            var gameGenre = db.GameGenres.Get(gameGenreDTO.Id);
+            var gameGenre = await db.GameGenres.GetAsync(gameGenreDTO.Id);
 
             if (gameGenre != null)
             {
@@ -41,26 +41,26 @@ namespace InnoflowServer.Infrastructure.Business.Services
                 Name = gameGenreDTO.Name
             };
 
-            db.GameGenres.Create(gameGenre);
-            db.Save();
+            await db.GameGenres.CreateAsync(gameGenre);
+
             return true;
         }
 
-        public GameGenreDTO Get(int id)
+        public async Task<GameGenreDTO> GetAsync(int id)
         {
-            var gameGenre = db.Orders.Get(id);
+            var gameGenre = await db.GameGenres.GetAsync(id);
 
             if (gameGenre == null)
             {
                 return null;
             }
 
-            return _mapper.Map<GameGenre, GameGenreDTO>(db.GameGenres.Get(id));
+            return _mapper.Map<GameGenre, GameGenreDTO>(await db.GameGenres.GetAsync(id));
         }
 
-        public bool Update(GameGenreDTO gameGenreDTO)
+        public async Task<bool> UpdateAsync(GameGenreDTO gameGenreDTO)
         {
-            var gameGenre = db.GameGenres.Get(gameGenreDTO.Id);
+            var gameGenre = await db.GameGenres.GetAsync(gameGenreDTO.Id);
 
             if (gameGenre == null)
             {
@@ -72,23 +72,20 @@ namespace InnoflowServer.Infrastructure.Business.Services
                 Name = gameGenreDTO.Name
             };
 
-            db.GameGenres.Update(gameGenre);
-            db.Save();
+            await db.GameGenres.UpdateAsync(gameGenre);
             return true;
         }
 
-        public bool Delete(int id)
+        public async Task<bool> DeleteAsync(int id)
         {
-            GameGenre gameGenre = db.GameGenres.Get(id);
+            var gameGenre = await db.GameGenres.GetAsync(id);
 
             if (gameGenre == null)
             {
                 return false;
-
             }
-            db.GameGenres.Delete(id);
-            db.Save();
-            return true;
+
+            return await db.GameGenres.DeleteAsync(id);
         }
     }
 }

@@ -22,14 +22,14 @@ namespace InnoflowServer.Infrastructure.Business.Services
             db = uow;
         }
 
-        public IEnumerable<VideoGameDTO> GetAll()
+        public  async Task<IEnumerable<VideoGameDTO>> GetAllAsync()
         {
-            return _mapper.Map<IEnumerable<VideoGame>, List<VideoGameDTO>>(db.VideoGames.GetAll());
+            return _mapper.Map<IEnumerable<VideoGame>, List<VideoGameDTO>>(await db.VideoGames.GetAllAsync());
         }
 
-        public bool Create(VideoGameDTO videoGameDTO)
+        public async Task<bool> CreateAsync(VideoGameDTO videoGameDTO)
         {
-            var videoGame = db.VideoGames.Get(videoGameDTO.Id);
+            var videoGame = await db.VideoGames.GetAsync(videoGameDTO.Id);
 
             if (videoGame != null)
             {
@@ -45,26 +45,26 @@ namespace InnoflowServer.Infrastructure.Business.Services
                 Cost = videoGameDTO.Cost,
             };
 
-            db.VideoGames.Create(videoGame);
-            db.Save();
+            await db.VideoGames.CreateAsync(videoGame);
+
             return true;
         }
 
-        public VideoGameDTO Get(int id)
+        public async Task<VideoGameDTO> GetAsync(int id)
         {
-            var videoGame = db.VideoGames.Get(id);
+            var videoGame = await db.VideoGames.GetAsync(id);
 
             if (videoGame == null)
             {
                 return null;
             }
 
-            return _mapper.Map<VideoGame, VideoGameDTO>(db.VideoGames.Get(id));
+            return _mapper.Map<VideoGame, VideoGameDTO>(await db.VideoGames.GetAsync(id));
         }
 
-        public bool Update(VideoGameDTO videoGameDTO)
+        public async Task<bool> UpdateAsync(VideoGameDTO videoGameDTO)
         {
-            var videoGame = db.VideoGames.Get(videoGameDTO.Id);
+            var videoGame = await db.VideoGames.GetAsync(videoGameDTO.Id);
 
             if (videoGame == null)
             {
@@ -78,23 +78,21 @@ namespace InnoflowServer.Infrastructure.Business.Services
                 Cost = videoGameDTO.Cost,
             };
 
-            db.VideoGames.Update(videoGame);
+            await db.VideoGames.UpdateAsync(videoGame);
             db.Save();
             return true;
         }
 
-        public bool Delete(int id)
+        public async Task<bool> DeleteAsync(int id)
         {
-            VideoGame videoGame = db.VideoGames.Get(id);
+            var videoGame = await db.VideoGames.GetAsync(id);
 
             if (videoGame == null)
             {
                 return false;
-
             }
-            db.VideoGames.Delete(id);
-            db.Save();
-            return true;
+
+            return await db.VideoGames.DeleteAsync(id);
         }
     }
 }

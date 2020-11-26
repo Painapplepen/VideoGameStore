@@ -46,11 +46,11 @@ namespace VideoGameStore
 
             services.AddTransient<IUnitOfWork, UnitOFWork>();
 
-            services.AddTransient<IRepository<VideoGame>, VideoGameRepository>();
-            services.AddTransient<IRepository<GameGenre>, GameGenreRepository>();
-            services.AddTransient<IRepository<Order>, OrderRepository>();
-            services.AddTransient<IRepository<Comment>, CommentRepository>();
-            services.AddTransient<IRepository<Company>, CompanyRepository>();
+            services.AddTransient<IRepository<VideoGame>, DbRepository<VideoGame>>();
+            services.AddTransient<IRepository<GameGenre>, DbRepository<GameGenre>>();
+            services.AddTransient<IRepository<Order>, DbRepository<Order>>();
+            services.AddTransient<IRepository<Comment>, DbRepository<Comment>>();
+            services.AddTransient<IRepository<Company>, DbRepository<Company>>();
 
             services.AddTransient<IService<VideoGameDTO>, VideoGameService>();
             services.AddTransient<IService<GameGenreDTO>, GameGenreService>();

@@ -10,7 +10,9 @@ namespace VideoGameStore.Domain.Core.Entities
     public class User : IdentityUser
     {
         public List<Comment> Comments { get; set; }
+
         public List<UserVideoGame> UserVideoGames { get; set; }
+
         public List<UserOrder> UserOrders { get; set; }
     }
 }

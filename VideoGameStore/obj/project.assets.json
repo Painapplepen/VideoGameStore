@@ -1988,22 +1988,6 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "InnoflowServer.Infrastructure.Business/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "VideoGameStore.Domain.Core": "1.0.0",
-          "VideoGameStore.Domain.Interface": "1.0.0",
-          "VideoGameStore.Infrastructure.Data": "1.0.0",
-          "VideoGameStore.Services.Interfaces": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/InnoflowServer.Infrastructure.Business.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/InnoflowServer.Infrastructure.Business.dll": {}
-        }
-      },
       "VideoGameStore.Domain.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -2030,6 +2014,22 @@
         },
         "runtime": {
           "bin/placeholder/VideoGameStore.Domain.Interface.dll": {}
+        }
+      },
+      "VideoGameStore.Infrastructure.Business/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "VideoGameStore.Domain.Core": "1.0.0",
+          "VideoGameStore.Domain.Interface": "1.0.0",
+          "VideoGameStore.Infrastructure.Data": "1.0.0",
+          "VideoGameStore.Services.Interfaces": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/VideoGameStore.Infrastructure.Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VideoGameStore.Infrastructure.Business.dll": {}
         }
       },
       "VideoGameStore.Infrastructure.Data/1.0.0": {
@@ -6880,11 +6880,6 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "InnoflowServer.Infrastructure.Business/1.0.0": {
-      "type": "project",
-      "path": "../InnoflowServer.Infrastructure.Business/InnoflowServer.Infrastructure.Business.csproj",
-      "msbuildProject": "../InnoflowServer.Infrastructure.Business/InnoflowServer.Infrastructure.Business.csproj"
-    },
     "VideoGameStore.Domain.Core/1.0.0": {
       "type": "project",
       "path": "../VideoGameStore.Domain.Core/VideoGameStore.Domain.Core.csproj",
@@ -6894,6 +6889,11 @@
       "type": "project",
       "path": "../VideoGameStore.Domain.Interface/VideoGameStore.Domain.Interface.csproj",
       "msbuildProject": "../VideoGameStore.Domain.Interface/VideoGameStore.Domain.Interface.csproj"
+    },
+    "VideoGameStore.Infrastructure.Business/1.0.0": {
+      "type": "project",
+      "path": "../InnoflowServer.Infrastructure.Business/VideoGameStore.Infrastructure.Business.csproj",
+      "msbuildProject": "../InnoflowServer.Infrastructure.Business/VideoGameStore.Infrastructure.Business.csproj"
     },
     "VideoGameStore.Infrastructure.Data/1.0.0": {
       "type": "project",
@@ -6909,9 +6909,9 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.0",
-      "InnoflowServer.Infrastructure.Business >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3",
+      "VideoGameStore.Infrastructure.Business >= 1.0.0",
       "VideoGameStore.Infrastructure.Data >= 1.0.0",
       "VideoGameStore.Services.Interfaces >= 1.0.0"
     ]
@@ -6949,8 +6949,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "D:\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\InnoflowServer.Infrastructure.Business.csproj": {
-              "projectPath": "D:\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\InnoflowServer.Infrastructure.Business.csproj"
+            "D:\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\VideoGameStore.Infrastructure.Business.csproj": {
+              "projectPath": "D:\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\VideoGameStore.Infrastructure.Business.csproj"
             },
             "D:\\VideoGameStore\\VideoGameStore.Infrastructure.Data\\VideoGameStore.Infrastructure.Data.csproj": {
               "projectPath": "D:\\VideoGameStore\\VideoGameStore.Infrastructure.Data\\VideoGameStore.Infrastructure.Data.csproj"

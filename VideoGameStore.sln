@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoGameStore", "VideoGameStore\VideoGameStore.csproj", "{7DB632B2-E4F9-4DA6-A941-9636EC659DEF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoGameStore", "VideoGameStore\VideoGameStore.csproj", "{7DB632B2-E4F9-4DA6-A941-9636EC659DEF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{9F050744-F722-4448-ADDF-52B63DD5AF7E}"
 EndProject
@@ -11,15 +11,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{8FE99492-3E3F-4EE6-B72A-D5F3B672428F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoGameStore.Domain.Core", "VideoGameStore.Domain.Core\VideoGameStore.Domain.Core.csproj", "{0F80C3E5-93E1-4C04-8D04-FFAF07A6EFBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoGameStore.Domain.Core", "VideoGameStore.Domain.Core\VideoGameStore.Domain.Core.csproj", "{0F80C3E5-93E1-4C04-8D04-FFAF07A6EFBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InnoflowServer.Infrastructure.Business", "InnoflowServer.Infrastructure.Business\InnoflowServer.Infrastructure.Business.csproj", "{91700857-5716-4AEA-AB6B-8EE05B66609A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoGameStore.Infrastructure.Business", "InnoflowServer.Infrastructure.Business\VideoGameStore.Infrastructure.Business.csproj", "{91700857-5716-4AEA-AB6B-8EE05B66609A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoGameStore.Infrastructure.Data", "VideoGameStore.Infrastructure.Data\VideoGameStore.Infrastructure.Data.csproj", "{C271789F-E215-423F-96CE-AF3B2B1D34C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoGameStore.Infrastructure.Data", "VideoGameStore.Infrastructure.Data\VideoGameStore.Infrastructure.Data.csproj", "{C271789F-E215-423F-96CE-AF3B2B1D34C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoGameStore.Services.Interfaces", "VideoGameStore.Services.Interfaces\VideoGameStore.Services.Interfaces.csproj", "{163D4E87-9EF7-4351-88CA-3BD75CCC511C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoGameStore.Services.Interfaces", "VideoGameStore.Services.Interfaces\VideoGameStore.Services.Interfaces.csproj", "{163D4E87-9EF7-4351-88CA-3BD75CCC511C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoGameStore.Domain.Interface", "VideoGameStore.Domain.Interface\VideoGameStore.Domain.Interface.csproj", "{17A4D5A5-A99D-4AF3-8414-0D1AC16D5B15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoGameStore.Domain.Interface", "VideoGameStore.Domain.Interface\VideoGameStore.Domain.Interface.csproj", "{17A4D5A5-A99D-4AF3-8414-0D1AC16D5B15}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

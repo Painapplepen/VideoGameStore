@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\InnoflowServer.Infrastructure.Business\InnoflowServer.Infrastructure.Business.csproj" />
+    <ProjectReference Include="..\InnoflowServer.Infrastructure.Business\VideoGameStore.Infrastructure.Business.csproj" />
     <ProjectReference Include="..\VideoGameStore.Infrastructure.Data\VideoGameStore.Infrastructure.Data.csproj" />
     <ProjectReference Include="..\VideoGameStore.Services.Interfaces\VideoGameStore.Services.Interfaces.csproj" />
   </ItemGroup>

@@ -9,8 +9,11 @@ namespace VideoGameStore.Domain.Core.Entities
     public class Company
     {
         public int Id { get; set; }
+
         public string Name { get; set; }
+
         public string Location { get; set; }
+
         public List<VideoGame> VideoGames { get; set; }
     }
 }

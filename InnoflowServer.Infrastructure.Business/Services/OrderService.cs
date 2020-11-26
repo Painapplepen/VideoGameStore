@@ -22,14 +22,14 @@ namespace InnoflowServer.Infrastructure.Business.Services
             db = uow;
         }
 
-        public IEnumerable<OrderDTO> GetAll()
+        public async Task<IEnumerable<OrderDTO>> GetAllAsync()
         {
-            return _mapper.Map<IEnumerable<Order>, List<OrderDTO>>(db.Orders.GetAll());
+            return _mapper.Map<IEnumerable<Order>, List<OrderDTO>>(await db.Orders.GetAllAsync());
         }
 
-        public bool Create(OrderDTO orderDTO)
+        public async Task<bool> CreateAsync(OrderDTO orderDTO)
         {
-            var order = db.Orders.Get(orderDTO.Id);
+            var order = await db.Orders.GetAsync(orderDTO.Id);
 
             if (order != null)
             {
@@ -38,30 +38,29 @@ namespace InnoflowServer.Infrastructure.Business.Services
 
             order = new Order
             {
-                DateTime = orderDTO.DateTime,
-                VideoGameId = orderDTO.VideoGameId
+                DateTime = orderDTO.DateTime
             };
 
-            db.Orders.Create(order);
-            db.Save();
+            await db.Orders.CreateAsync(order);
+
             return true;
         }
 
-        public OrderDTO Get(int id)
+        public async Task<OrderDTO> GetAsync(int id)
         {
-            var order = db.Orders.Get(id);
+            var order = await db.Orders.GetAsync(id);
 
             if (order == null)
             {
                 return null;
             }
 
-            return _mapper.Map<Order, OrderDTO>(db.Orders.Get(id));
+            return _mapper.Map<Order, OrderDTO>(await db.Orders.GetAsync(id));
         }
 
-        public bool Update(OrderDTO orderDTO)
+        public async Task<bool> UpdateAsync(OrderDTO orderDTO)
         {
-            var order = db.Orders.Get(orderDTO.Id);
+            var order = await db.Orders.GetAsync(orderDTO.Id);
 
             if (order == null)
             {
@@ -73,23 +72,21 @@ namespace InnoflowServer.Infrastructure.Business.Services
                 DateTime = orderDTO.DateTime
             };
 
-            db.Orders.Update(order);
-            db.Save();
+            await db.Orders.UpdateAsync(order);
             return true;
         }
 
-        public bool Delete(int id)
+        public async Task<bool> DeleteAsync(int id)
         {
-            Order order = db.Orders.Get(id);
+            var comment = await db.Orders.GetAsync(id);
 
-            if (order == null)
+            if (comment == null)
             {
                 return false;
 
             }
-            db.Orders.Delete(id);
-            db.Save();
-            return true;
+
+            return await db.Orders.DeleteAsync(id);
         }
     }
 }

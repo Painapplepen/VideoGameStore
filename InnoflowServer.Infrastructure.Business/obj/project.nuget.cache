@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Sh0jQmeWNUpw0d2UHiGdWh6P2wmxWcRiPtQEhL7uS02QozchZK0idD9I5GJED/DlsoIFv1PEPjUcqdX8IiFqaQ==",
+  "dgSpecHash": "v9Cx36EsdSWG7u8crCTZEy98Y2vxnPvJe+fA0HkBzuLDvLkshet4ZcZyikNbOTurqOLjnxu6uCN67w4zwdsD4w==",
   "success": true,
-  "projectFilePath": "D:\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\InnoflowServer.Infrastructure.Business.csproj",
+  "projectFilePath": "D:\\VideoGameStore\\InnoflowServer.Infrastructure.Business\\VideoGameStore.Infrastructure.Business.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sanin\\.nuget\\packages\\automapper\\10.1.0\\automapper.10.1.0.nupkg.sha512",
     "C:\\Users\\sanin\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",

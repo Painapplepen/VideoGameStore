@@ -22,14 +22,14 @@ namespace InnoflowServer.Infrastructure.Business.Services
             db = uow;
         }
 
-        public IEnumerable<CompanyDTO> GetAll()
+        public async Task<IEnumerable<CompanyDTO>> GetAllAsync()
         {
-            return _mapper.Map<IEnumerable<Company>, List<CompanyDTO>>(db.Companies.GetAll());
+            return _mapper.Map<IEnumerable<Company>, List<CompanyDTO>>(await db.Companies.GetAllAsync());
         }
 
-        public bool Create(CompanyDTO companyDTO)
+        public async Task<bool> CreateAsync(CompanyDTO companyDTO)
         {
-            var company = db.Companies.Get(companyDTO.Id);
+            var company = await db.Companies.GetAsync(companyDTO.Id);
 
             if (company != null)
             {
@@ -42,26 +42,26 @@ namespace InnoflowServer.Infrastructure.Business.Services
                 Location = companyDTO.Location
             };
 
-            db.Companies.Create(company);
-            db.Save();
+            await db.Companies.CreateAsync(company);
+
             return true;
         }
 
-        public CompanyDTO Get(int id)
+        public async Task<CompanyDTO> GetAsync(int id)
         {
-            var company = db.Companies.Get(id);
+            var company = await db.Companies.GetAsync(id);
 
             if (company == null)
             {
                 return null;
             }
 
-            return _mapper.Map<Company, CompanyDTO>(db.Companies.Get(id));
+            return _mapper.Map<Company, CompanyDTO>(await db.Companies.GetAsync(id));
         }
 
-        public bool Update(CompanyDTO companyDTO)
+        public async Task<bool> UpdateAsync(CompanyDTO companyDTO)
         {
-            var company = db.Companies.Get(companyDTO.Id);
+            var company = await db.Companies.GetAsync(companyDTO.Id);
 
             if (company == null)
             {
@@ -70,26 +70,24 @@ namespace InnoflowServer.Infrastructure.Business.Services
 
             company = new Company
             {
-                Name = companyDTO.Name
+                Name = companyDTO.Name,
+                Location = companyDTO.Location
             };
 
-            db.Companies.Update(company);
-            db.Save();
+            await db.Companies.UpdateAsync(company);
             return true;
         }
 
-        public bool Delete(int id)
+        public async Task<bool> DeleteAsync(int id)
         {
-            Company company = db.Companies.Get(id);
+            var company = await db.Companies.GetAsync(id);
 
             if (company == null)
             {
                 return false;
-
             }
-            db.Companies.Delete(id);
-            db.Save();
-            return true;
+
+            return await db.Companies.DeleteAsync(id);
         }
     }
 }
